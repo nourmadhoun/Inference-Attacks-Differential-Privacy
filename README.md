@@ -1,5 +1,5 @@
 
-# **Inference Attacks Against Differentially-PrivateQuery Results from Genomic Datasets IncludingDependent Tuples**
+# **Inference Attacks Against Differentially-PrivateQuery Results from Genomic Datasets Including Dependent Tuples**
 Described in the Bioinformatics journal paper (2020) by Almadhoun et al. at: 
 ## Abstract:
 The rapid decrease in the sequencing technology costs leads to a revolution in medical research and clinical care.
