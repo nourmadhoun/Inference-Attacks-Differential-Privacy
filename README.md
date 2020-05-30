@@ -1,6 +1,6 @@
 
 # **Inference Attacks Against Differentially-PrivateQuery Results from Genomic Datasets Including Dependent Tuples**
-To be Presented in the ISMB2020 Conference. 
+To be Presented in the ISMB2020 Conference: https://www.iscb.org/cms_addon/conferences/ismb2020/proceedings.php 
 Described in the Bioinformatics journal paper (2020) by Almadhoun et al. at: 
 ## Abstract:
 The rapid decrease in the sequencing technology costs leads to a revolution in medical research and clinical care.
