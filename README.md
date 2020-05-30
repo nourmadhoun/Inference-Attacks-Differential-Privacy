@@ -1,11 +1,28 @@
 
-# **Differential Privacy under Dependent Tuples -  The Case of Genomic Privacy**
-Described in the Bioinformatics journal paper (2019) by Almadhoun et al. at: https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btz837/5614817
+# **Inference Attacks Against Differentially-PrivateQuery Results from Genomic Datasets IncludingDependent Tuples**
+Described in the Bioinformatics journal paper (2020) by Almadhoun et al. at: 
 ## Abstract:
-The rapid progress in genome sequencing has led to high availability of genomic data.Studying these data can greatly help answer the key questions about disease associations and ourevolution. However, due to growing privacy concerns about the sensitive information of participants,accessing key results and data of genomic studies (such as genome-wide association studies - GWAS) isrestricted to only trusted individuals. On the other hand, paving the way to biomedical breakthroughs anddiscoveries requires granting open access to genomic datasets. Privacy-preserving mechanisms can be asolution for granting wider access to such data while protecting their owners. In particular, there has beengrowing interest in applying the concept of differential privacy (DP) while sharing summary statistics aboutgenomic data. DP provides a mathematically rigorous approach to prevent the risk of membership inferencewhile sharing statistical information about a dataset. However, DP does not consider the dependencebetween tuples in the dataset, which may degrade the privacy guarantees offered by the DP.
+The rapid decrease in the sequencing technology costs leads to a revolution in medical research and clinical care.
+Today, researchers have access to large genomic datasets to study associations between variants and complex traits.
+However, availability of such genomic datasets also results in new privacy concerns about personal information of the
+participants in genomic studies. Differential privacy (DP) is one of the rigorous privacy concepts, which received
+widespread interest for sharing summary statistics from genomic datasets while protecting the privacy of participants
+against inference attacks. However, DP has a known drawback as it does not consider the correlation between dataset
+tuples. Therefore, privacy guarantees of DP-based mechanisms may degrade if the dataset includes dependent tuples,
+which is a common situation for genomic datasets due to the inherent correlations between genomes of family
+members.
 
 ## Result:
-In this work, focusing on genomic datasets, we show this drawback of the DP and we proposetechniques to mitigate it. First, using a real-world genomic dataset, we demonstrate the feasibility of aninference attack on differentially private query results by utilizing the correlations between the entries inthe dataset. The results show the scale of vulnerability when we have dependent tuples in the dataset.We show that the adversary can infer sensitive genomic data about a user from the differentially privateresults of a query by exploiting the correlations between the genomes of family members. Second, wepropose a mechanism for privacy-preserving sharing of statistics from genomic datasets to attain privacyguarantees while taking into consideration the dependence between tuples. By evaluating our mechanismon different genomic datasets, we empirically demonstrate that our proposed mechanism can achieve upto 50% better privacy than traditional DP-based solutions.
+In this article, using two real-life genomic datasets, we show that exploiting the correlation between the dataset
+participants results in significant information leak from differentially private results of complex queries. We formulate
+this as an attribute inference attack and show the privacy loss in minor allele frequency (MAF) and chi-square queries.
+Our results show that using the results of differentially private MAF queries and utilizing the dependency between
+tuples, an adversary can reveal up to 50% more sensitive information about the genome of a target (compared to
+original privacy guarantees of standard DP-based mechanisms), while differentially privacy chi-square queries can
+reveal up to 40% more sensitive information. Furthermore, we show that the adversary can use the inferred genomic
+data obtained from the attribute inference attack to infer the membership of a target in another genomic dataset (e.g.
+associated with a sensitive trait). Using a log-likelihood-ratio test, our results also show that the inference power of the
+adversary can be significantly high in such an attack even using inferred (and hence partially incorrect) genomes.
 
 
 
